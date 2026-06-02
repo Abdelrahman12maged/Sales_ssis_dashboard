@@ -1,0 +1,652 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH",
+        "connectionString": "Provider=SQLOLEDB;Data Source=DESKTOP-IC98GCV\\SQLDEV;Initial Catalog=sales_DWH;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DIMCategory",
+        "columns": [
+          {
+            "name": "Cat_id",
+            "dataType": "int64",
+            "sourceColumn": "Cat_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Sub_cat",
+            "dataType": "string",
+            "sourceColumn": "Sub_cat",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMCategory",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMCategory].*   FROM [dbo].[DIMCategory] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMCategory].*   FROM [dbo].[DIMCategory] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMCategory"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIMCustomer",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer_name",
+            "dataType": "string",
+            "sourceColumn": "Customer_name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Segement",
+            "dataType": "string",
+            "sourceColumn": "Segement",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMCustomer",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMCustomer].*   FROM [dbo].[DIMCustomer] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMCustomer].*   FROM [dbo].[DIMCustomer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMCustomer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIMDate",
+        "columns": [
+          {
+            "name": "Date_key",
+            "dataType": "int64",
+            "sourceColumn": "Date_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Date",
+            "dataType": "string",
+            "sourceColumn": "Date",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "Quarter",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Day_Name",
+            "dataType": "string",
+            "sourceColumn": "Day_Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Month_Name",
+            "dataType": "string",
+            "sourceColumn": "Month_Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Day_Of_Week",
+            "dataType": "int64",
+            "sourceColumn": "Day_Of_Week",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Week_No",
+            "dataType": "int64",
+            "sourceColumn": "Week_No",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "is_weekend",
+            "dataType": "int64",
+            "sourceColumn": "is_weekend",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMDate",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMDate].*   FROM [dbo].[DIMDate] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMDate].*   FROM [dbo].[DIMDate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMDate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIMLocation",
+        "columns": [
+          {
+            "name": "Loc_id",
+            "dataType": "int64",
+            "sourceColumn": "Loc_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Postalcode",
+            "dataType": "int64",
+            "sourceColumn": "Postalcode",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMLocation",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMLocation].*   FROM [dbo].[DIMLocation] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMLocation].*   FROM [dbo].[DIMLocation] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMLocation"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimMarket",
+        "columns": [
+          {
+            "name": "Market_Key",
+            "dataType": "int64",
+            "sourceColumn": "Market_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Market",
+            "dataType": "string",
+            "sourceColumn": "Market",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Loc_id",
+            "dataType": "int64",
+            "sourceColumn": "Loc_id",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimMarket",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DimMarket].*   FROM [dbo].[DimMarket] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DimMarket].*   FROM [dbo].[DimMarket] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DimMarket"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIMOrder_Priority",
+        "columns": [
+          {
+            "name": "Order_id",
+            "dataType": "int64",
+            "sourceColumn": "Order_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Order_priority",
+            "dataType": "string",
+            "sourceColumn": "Order_priority",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Priority_Value",
+            "dataType": "int64",
+            "sourceColumn": "Priority_Value",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Ship_mode",
+            "dataType": "string",
+            "sourceColumn": "Ship_mode",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMOrder_Priority",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMOrder_Priority].*   FROM [dbo].[DIMOrder_Priority] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMOrder_Priority].*   FROM [dbo].[DIMOrder_Priority] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMOrder_Priority"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIMProduct",
+        "columns": [
+          {
+            "name": "Product_key",
+            "dataType": "int64",
+            "sourceColumn": "Product_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Product_name",
+            "dataType": "string",
+            "sourceColumn": "Product_name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Cat_id",
+            "dataType": "int64",
+            "sourceColumn": "Cat_id",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIMProduct",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[DIMProduct].*   FROM [dbo].[DIMProduct] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[DIMProduct].*   FROM [dbo].[DIMProduct] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIMProduct"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fact_Sales",
+        "columns": [
+          {
+            "name": "Fact_Sales_Key",
+            "dataType": "int64",
+            "sourceColumn": "Fact_Sales_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDateKey",
+            "dataType": "int64",
+            "sourceColumn": "OrderDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ShipDateKey",
+            "dataType": "int64",
+            "sourceColumn": "ShipDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Order_id",
+            "dataType": "int64",
+            "sourceColumn": "Order_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Product_key",
+            "dataType": "int64",
+            "sourceColumn": "Product_key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Market_Key",
+            "dataType": "int64",
+            "sourceColumn": "Market_Key",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "sales",
+            "dataType": "double",
+            "sourceColumn": "sales",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "quantity",
+            "dataType": "int64",
+            "sourceColumn": "quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "discount",
+            "dataType": "double",
+            "sourceColumn": "discount",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "profit",
+            "dataType": "double",
+            "sourceColumn": "profit",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "shipping_cost",
+            "dataType": "double",
+            "sourceColumn": "shipping_cost",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Sales",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Fact_Sales].*   FROM [dbo].[Fact_Sales] ",
+              "dataSource": "SqlServer DESKTOP-IC98GCVSQLDEV sales_DWH"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Sales",
+            "expression": " SUM(Fact_Sales[sales])"
+          },
+          {
+            "name": "Total Profit",
+            "expression": " SUM(Fact_Sales[profit])"
+          },
+          {
+            "name": "Total Quantity",
+            "expression": " SUM(Fact_Sales[quantity])"
+          },
+          {
+            "name": "Total Orders",
+            "expression": " DISTINCTCOUNT(Fact_Sales[Fact_Sales_Key])"
+          },
+          {
+            "name": "Profit Margin %",
+            "expression": [
+              " DIVIDE([Total Profit], [Total Sales], 0)",
+              ""
+            ]
+          },
+          {
+            "name": "Average Order Value",
+            "expression": [
+              " DIVIDE([Total Sales], DISTINCTCOUNT(Fact_Sales[Order_id]), 0)",
+              ""
+            ]
+          },
+          {
+            "name": "Average Discount",
+            "expression": [
+              " AVERAGE(Fact_Sales[discount])",
+              ""
+            ]
+          },
+          {
+            "name": "Total Active Customers",
+            "expression": [
+              " DISTINCTCOUNT(Fact_Sales[CustomerID])",
+              ""
+            ]
+          },
+          {
+            "name": "Sales per Customer",
+            "expression": [
+              " DIVIDE([Total Sales], [Total Active Customers], 0)",
+              ""
+            ]
+          },
+          {
+            "name": "Unique Products Sold",
+            "expression": [
+              " DISTINCTCOUNT(Fact_Sales[Product_key])",
+              ""
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Fact_Sales].*   FROM [dbo].[Fact_Sales] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fact_Sales"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "1b03f69a-9438-47a8-8f02-4ca4fb7885c3",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "OrderDateKey",
+        "toTable": "DIMDate",
+        "toColumn": "Date_key"
+      },
+      {
+        "name": "e65ba630-9683-4a30-8903-b66c63937133",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "ShipDateKey",
+        "toTable": "DIMDate",
+        "toColumn": "Date_key",
+        "isActive": false
+      },
+      {
+        "name": "540d8399-457d-491f-9998-345b40a8105e",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "CustomerID",
+        "toTable": "DIMCustomer",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "a91855fc-845c-4861-a8f0-3472d59203cc",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "Market_Key",
+        "toTable": "DimMarket",
+        "toColumn": "Market_Key"
+      },
+      {
+        "name": "649442b9-4395-4e21-817f-ed8ae0e2bf7b",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "Product_key",
+        "toTable": "DIMProduct",
+        "toColumn": "Product_key"
+      },
+      {
+        "name": "770c5842-27f0-48c5-af14-a872c33b80b6",
+        "fromTable": "Fact_Sales",
+        "fromColumn": "Order_id",
+        "toTable": "DIMOrder_Priority",
+        "toColumn": "Order_id"
+      },
+      {
+        "name": "251ed571-36b0-4db2-a78c-b8733181b2b3",
+        "fromTable": "DIMProduct",
+        "fromColumn": "Cat_id",
+        "toTable": "DIMCategory",
+        "toColumn": "Cat_id"
+      },
+      {
+        "name": "99128243-1577-414c-82ef-4c26b7b20564",
+        "fromTable": "DimMarket",
+        "fromColumn": "Loc_id",
+        "toTable": "DIMLocation",
+        "toColumn": "Loc_id"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

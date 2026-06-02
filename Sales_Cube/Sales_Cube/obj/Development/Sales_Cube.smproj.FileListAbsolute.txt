@@ -1,0 +1,8 @@
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\bin\Model.asdatabase
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\bin\Model.deploymenttargets
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\bin\Model.deploymentoptions
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\obj\Development\Sales_Cube.smproj.AssemblyReference.cache
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\obj\Development\Sales_Cube.smproj.CoreCompileInputs.cache
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\obj\Development\Model.asdatabase
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\obj\Development\Model.deploymentoptions
+C:\Users\Abdo\Desktop\Sales_Cube\Sales_Cube\obj\Development\Model.deploymenttargets
